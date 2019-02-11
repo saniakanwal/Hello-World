@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+<title>Scholarship Help</title>
+<head>	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'default.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'fonts.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'styles1.css' %}" type="text/css" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 8900px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+</head>
+
+<body>
+
+		<div id="sitename">
+			<div class="width">
+				<h1><a href="#">Scholarship Help</a></h1>
+
+
+				<nav>
+					<ul>
+        	    			<li><a href="{% url 'home' %}">Home</a></li>
+							<li><a href="{% url 'signup' %}">Sign Up</a></li>
+         	   				<li><a href="{% url 'login' %}">Send Email</a></li>
+          	  				<li><a href="{% url 'logout' %}">Logout</a></li>
+	
+        				</ul>
+				</nav>
+	
+				<div class="clear"></div>
+			</div>
+		</div>
+<div class="container">
+
+              <h2>       </h2>
+              <h2>       </h2>
+              <h2>       </h2>
+	{% block content %}
+	{% endblock content %}
+
+</div>
+
+</body>
+
+</html>
